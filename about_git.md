@@ -4,11 +4,17 @@ Git, 사용법
 Git
 --------------------
 
-### 설치
+### General
 
-- client install 
+- client install
 - [git site](https://git-scm.com/)
 - [document](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC%EB%9E%80%3F)
+
+Git 은 파일을 Committed, Modified, Staged 이렇게 세 가지 상태로 관리한다.
+
+- **Committed** : 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미
+- **Modified** : 수정한 파일을 아직 로컬 데이터베이스에 커밋하지 않은 것을 말함.
+- **Staged** : 현재 수정한 파일을 곧 커밋할 것이라고 표시한 상태를 의미한다.
 
 git command
 --------------------
@@ -146,16 +152,10 @@ git branch -d clean_up
 delete a branch
 
 ```cmd
-git config --global core.excludesfile D:\git_repository\ubecha\.gitignore_global
-```
-
-해당 파일에 git 저장소에서 관리되지 않길 바라는 파일을 적어두면 된다.
-
-```cmd
 git config --global --unset color.ui
 ```
 
-git config 에서 해당 key 값 삭제
+git config 에서 해당하는 key 값 삭제
 
 ```cmd
 git config --global core.editor "code --wait"
