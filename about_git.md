@@ -1,4 +1,4 @@
-Git, GitHub
+Git, 사용법
 ==================================================
 
 Git
@@ -54,6 +54,18 @@ git commit -m "Add memo"
 store our staged changes in the reposoitory
 
 ```cmd
+git mv file_from file_to
+```
+
+파일 이름 변경하기. 위의 명령어는 사실 아래 명령어를 수행한 것과 똑같다
+
+```cmd
+$ mv README.md README
+$ git rm README.md
+$ git add README
+```
+
+```cmd
 git log
 ```
 
@@ -65,6 +77,7 @@ git remote add origin https://github.com/ubecha/study.git
 
 after create github repository, to push our local repo to the GitHub server we'll need to add a remote repository
 git remoe add [단축이름] [url] 의미.
+원격서버 정보를 하나 추가한다고 보면 된다
 
 ```cmd
 git clone https://github.com/ubecha/study.git
@@ -131,6 +144,25 @@ git branch -d clean_up
 ```
 
 delete a branch
+
+```cmd
+git config --global core.excludesfile D:\git_repository\ubecha\.gitignore_global
+```
+
+해당 파일에 git 저장소에서 관리되지 않길 바라는 파일을 적어두면 된다.
+
+```cmd
+git config --global --unset color.ui
+```
+
+git config 에서 해당 key 값 삭제
+
+```cmd
+git config --global core.editor "code --wait"
+git config --global -e
+```
+
+editor 를 vscode 로 이용. -e 명령은 직접 편집.
 
 용어정리
 --------------------------------
