@@ -64,6 +64,14 @@ git remote add origin https://github.com/ubecha/study.git
 ```
 
 after create github repository, to push our local repo to the GitHub server we'll need to add a remote repository
+git remoe add [단축이름] [url] 의미.
+
+```cmd
+git clone https://github.com/ubecha/study.git
+```
+
+`git clone`은 사실 다른 명령어를 몇 개 실행한다. 디렉토리를 만들고 디렉토리로 들어가고 나서 `git init` 명령으로 빈 Git 저장소를 만든다. 그다음 입력한 URL을 `origin` 이라는(기본값) 이름의 리모트로
+추가하고(git remote add) git fetch 명령으로 리모트 저장소에서 데이터를 가져온다. 마지막으로 최종 커밋을 워킹 디렉토리에 Checkout 한다(git checkout).
 
 ```cmd
 git push -u origin master
@@ -109,7 +117,7 @@ two local branches : master, clean_up
 git checkout clean_up
 ```
 
-switch branches using the git checkout 
+switch branches using the git checkout
 
 ```cmd
 git merge clean_up
